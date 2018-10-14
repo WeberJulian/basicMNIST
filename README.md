@@ -3,7 +3,7 @@
 ## Context :
 Basic MNIST classifier with Tensorflow  
 
-This is what you get when you follow the instructions of the "Tensorflow in 5 min" youtube video by Siraj Raval.
+This is what you get when you follow the instructions of the ["Tensorflow in 5 min"](https://www.youtube.com/watch?v=2FmcHiLCwTU) youtube video by Siraj Raval.
 
 His code use depreciated functions, here is a working version with tensorflow 1.11
 
