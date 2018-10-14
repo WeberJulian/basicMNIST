@@ -1,9 +1,11 @@
 # basicMNIST
 
 ## Context :
-Basic MNIST classifier with Tensorflow
-This is what you get when you do the "Tensorflow in 5 min" youtube video by Siraj Raval.
-His code was depreciated, here is a working version with tensorflow 1.11
+Basic MNIST classifier with Tensorflow  
+
+This is what you get when you follow the instructions of the "Tensorflow in 5 min" youtube video by Siraj Raval.
+
+His code use depreciated functions, here is a working version with tensorflow 1.11
 
 
 ## Results :
