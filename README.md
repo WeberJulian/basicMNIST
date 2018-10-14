@@ -35,7 +35,7 @@ Accuracy : 0.9221
 
 ### Tensorboard
 #### Cost Function
-![costFunction](img/costFunction.jpg)
+![costFunction](img/CostFunction.JPG)
 #### Graph
-![graph](img/graph.jpg)
+![graph](img/graph.JPG)
 
