@@ -7,8 +7,9 @@ His code was depreciated, here is a working version with tensorflow 1.11
 
 
 ## Results :
-### Console :
+### Console
 
+```
 Extracting MNIST_data\train-images-idx3-ubyte.gz
 Extracting MNIST_data\train-labels-idx1-ubyte.gz
 Extracting MNIST_data\t10k-images-idx3-ubyte.gz
@@ -30,7 +31,11 @@ Iteration : 26 Cost : 18.199800104661428
 Iteration : 28 Cost : 18.081295450383966
 Training completed
 Accuracy : 0.9221
+```
 
 ### Tensorboard
-#### Cost Function :
+#### Cost Function
+![costFunction](img/costFunction.jpg)
+#### Graph
+![graph](img/graph.jpg)
 
