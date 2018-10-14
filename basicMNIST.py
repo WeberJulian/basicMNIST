@@ -39,6 +39,33 @@ init = tf.initialize_all_variables()
 
 mergedOperator = tf.summary.merge_all()
 
+with tf.Session() as sess:
+    sess.run(init)
+
+    summaryWriter = tf.summary.FileWriter("./logs", graph_def=sess.graph_def)
+
+    # Training
+    for i in range(trainingIteration):
+        avgCost = 0.
+        totalBatch = int(mnist.train.num_examples/batchSize)
+        for j in range(totalBatch):
+            batchXs, batchYs = mnist.train.next_batch(batchSize)
+            sess.run(optimizer, feed_dict={x: batchXs, y: batchYs})
+            avgCost += sess.run(costFunction, feed_dict={x: batchXs, y: batchYs})/totalBatch
+            summaryStr = sess.run(mergedOperator, feed_dict={x: batchXs, y: batchYs})
+            summaryWriter.add_summary(summaryStr, i * totalBatch + j)
+        if i % displayStep == 0:
+            print("Iteration : " + str(i) + " Cost : " + str(avgCost))
+    print("Training completed")
+    predictions = tf.equal(tf.argmax(model, 1), tf.argmax(y, 1))
+    accuracy = tf.reduce_mean(tf.cast(predictions, "float"))
+    print("Accuracy : " + str(accuracy.eval({x: mnist.test.images, y: mnist.test.labels})))
+        
+
+
+    
+
+
 
 
 
